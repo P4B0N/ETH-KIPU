@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Interfaces.sol": "ERC20"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Interfaces.sol": {
+			"keccak256": "0x0d28102fac44800baec0ec93c90dea2e121893d6f28bf6a7d42368ee27fe7a39",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b8724773e4dc8986625badc289a3c8a11ad9655244d47dc03eafc3af33537dec",
+				"dweb:/ipfs/QmaXQAVfHAhfJYjawXTZyKc9VrjGbpttizPMHrjZawsLn2"
+			]
+		}
+	},
+	"version": 1
+}
