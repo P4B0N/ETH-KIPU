@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "quienSoy",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Herencia.sol": "Madre"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Herencia.sol": {
+			"keccak256": "0x753bedf2e21c4f90b32f53384e14721374f8bd2646aa0654e12fe089d9193edf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dd19f890a192d3797b6084aaa5cb2fb9d9f40f4fc9274227071d1cfaeabd3733",
+				"dweb:/ipfs/QmVJ6bzUCwGqrnsCY5z5pGErSeAAmU2WJuzfQX213AM3nw"
+			]
+		}
+	},
+	"version": 1
+}
