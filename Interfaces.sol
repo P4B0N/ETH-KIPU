@@ -29,4 +29,3 @@ contract ICO {
         return usdt.balanceOf(address(this));
     }
 }
-
