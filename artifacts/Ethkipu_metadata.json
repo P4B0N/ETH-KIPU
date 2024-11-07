@@ -596,11 +596,11 @@
 			]
 		},
 		"ethkiputoken.sol": {
-			"keccak256": "0x48627e247534e485686cd03f640c8612deac9d929b2952cf318d62dd2a29cdc9",
+			"keccak256": "0xc0754b789f3f8d9935cec75dc9980ae03028947207714b97159e810eb3e4d93e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://920eb62582031a3f194e197d278e8285c52baf5eb7b17c0f843feaec73886ce3",
-				"dweb:/ipfs/QmWqj9o45Wpx83twSGoDukjuKAo3p5N63m9fay8BmHvZzj"
+				"bzz-raw://5df44b049f2b2b4a5f494ee8c71a99c26b2aa5822a25feb1e7dc5920bb938f4e",
+				"dweb:/ipfs/QmdonH74hZjAb2eC6Wtr5sWTf25TGLhbNordzxkcoctn1L"
 			]
 		}
 	},
