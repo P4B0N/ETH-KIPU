@@ -1,6 +1,10 @@
+/**
+ *Submitted for verification at sepolia.scrollscan.com on 2024-11-10
+*/
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-/// @title Contrato de Subasta Bonaduce
+/// @title Contrato de Subasta Buenos Aires
 /// @dev Este contrato implementa una subasta donde los usuarios pueden ofertar, 
 ///      retirar reenbolsos parciales, y el propietario puede retirar las comisiones 
 ///      y la oferta ganadora una vez que reenbolsa a los postores y la subasta esta finalizada finaliza.
@@ -9,9 +13,9 @@ pragma solidity ^0.8.0;
 /// @notice Este contrato solo es accesible por el propietario para ciertas funciones
 ///         
 ///
-/// @author Pablo Luján Bonaduce
+/// @author Mario A. Parodi
 
-contract AuctionSubasta {
+contract AuctionBsAs {
     /// @dev Enum que representa los posibles estados de la subasta
     enum AuctionState { Active, Ended, DepositsRefunded, Completed }
 

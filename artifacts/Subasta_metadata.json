@@ -122,7 +122,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Subasta.sol": "Subasta"
+			"Prueba_Subasta.sol": "Subasta"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -136,7 +136,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"Subasta.sol": {
+		"Prueba_Subasta.sol": {
 			"keccak256": "0x7d30fbf46067fc9aae7d882f25955d14485ebe16a57075f5d83361baabafb745",
 			"license": "GPL-3.0",
 			"urls": [

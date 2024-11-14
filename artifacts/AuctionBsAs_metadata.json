@@ -1,0 +1,614 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_duration",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					}
+				],
+				"name": "AuctionCompleted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "winner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "winningBid",
+						"type": "uint256"
+					}
+				],
+				"name": "AuctionEnded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newEndTime",
+						"type": "uint256"
+					}
+				],
+				"name": "AuctionExtended",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "bidder",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "BidPlaced",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "CommissionsWithdrawn",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "bidder",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "DepositWithdrawn",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "bidder",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "PartialRefund",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "WinningBidWithdrawn",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "auctionEndTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "auctionState",
+				"outputs": [
+					{
+						"internalType": "enum AuctionBsAs.AuctionState",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "bidders",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "bidsHistory",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "commissionFunds",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "endAuction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "highestBid",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "highestBidder",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "offersHistory",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "bidder",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "partialRefund",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "partialRefundedAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "placeBid",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "totalBids",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "viewDeposits",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "viewOffers",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "bidder",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct AuctionBsAs.Offer[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawCommissions",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawDeposits",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawWinningBid",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Mario A. Parodi",
+			"details": "Este contrato implementa una subasta donde los usuarios pueden ofertar,       retirar reenbolsos parciales, y el propietario puede retirar las comisiones       y la oferta ganadora una vez que reenbolsa a los postores y la subasta esta finalizada finaliza.      El contrato también maneja una extensión de tiempo si se colocan ofertas cerca del final de la subasta.",
+			"events": {
+				"AuctionCompleted(bool)": {
+					"params": {
+						"success": "Indica si la subasta se completó sin errores (true si no hubo errores) "
+					}
+				},
+				"AuctionEnded(address,uint256)": {
+					"params": {
+						"winner": "Dirección del postor ganador",
+						"winningBid": "Monto de la oferta ganadora"
+					}
+				},
+				"AuctionExtended(uint256)": {
+					"params": {
+						"newEndTime": "Nueva hora de finalización de la subasta"
+					}
+				},
+				"BidPlaced(address,uint256)": {
+					"params": {
+						"amount": "Monto de la oferta realizada",
+						"bidder": "Dirección del postor"
+					}
+				},
+				"CommissionsWithdrawn(uint256)": {
+					"params": {
+						"amount": "Monto retirado"
+					}
+				},
+				"DepositWithdrawn(address,uint256)": {
+					"params": {
+						"amount": "Monto reenbolsado",
+						"bidder": "Dirección del postor"
+					}
+				},
+				"PartialRefund(address,uint256)": {
+					"params": {
+						"amount": "Monto reembolsado",
+						"bidder": "Dirección del postor"
+					}
+				},
+				"WinningBidWithdrawn(uint256)": {
+					"params": {
+						"amount": "Monto retirado"
+					}
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"params": {
+						"_duration": "Duración de la subasta en segundos"
+					}
+				},
+				"partialRefund()": {
+					"details": "Solo puede realizarse durante una subasta activa"
+				},
+				"placeBid()": {
+					"details": "Solo es válida durante una subasta activa, y debe cumplir con los requisitos de oferta valida"
+				},
+				"viewDeposits()": {
+					"returns": {
+						"_0": "Un arreglo con las direcciones de los postores y sus montos actuales"
+					}
+				},
+				"viewOffers()": {
+					"returns": {
+						"_0": "Un arreglo de ofertas realizadas en la subasta"
+					}
+				}
+			},
+			"stateVariables": {
+				"bidders": {
+					"details": "Lista de postores que han participado en la subasta"
+				},
+				"bidsHistory": {
+					"details": "Mapeo de todas las ofertas realizadas por cada postor"
+				},
+				"offersHistory": {
+					"details": "Historial de todas las ofertas realizadas en la subasta"
+				},
+				"partialRefundedAmount": {
+					"details": "Mapeo del monto ya reembolsado parcialmente a cada postor"
+				},
+				"totalBids": {
+					"details": "Mapeo del total de las ofertas de cada postor"
+				}
+			},
+			"title": "Contrato de Subasta Buenos Aires",
+			"version": 1
+		},
+		"userdoc": {
+			"events": {
+				"AuctionCompleted(bool)": {
+					"notice": "Evento que se emite cuando la subasta se ha completado exitosamente "
+				},
+				"AuctionEnded(address,uint256)": {
+					"notice": "Evento que se emite cuando la subasta termina mostrando el ganador y el monto ganador"
+				},
+				"AuctionExtended(uint256)": {
+					"notice": "Evento que se emite cuando la subasta es extendida"
+				},
+				"BidPlaced(address,uint256)": {
+					"notice": "Evento que se emite cuando un postor realiza una nueva oferta"
+				},
+				"CommissionsWithdrawn(uint256)": {
+					"notice": "Evento que se emite cuando el propietario retira las comisiones"
+				},
+				"DepositWithdrawn(address,uint256)": {
+					"notice": "Evento que se emite cuando el owner reenbolsa          los depositos a los postores"
+				},
+				"PartialRefund(address,uint256)": {
+					"notice": "Evento que se emite cuando se realiza un reembolso parcial"
+				},
+				"WinningBidWithdrawn(uint256)": {
+					"notice": "Evento que se emite cuando el propietario retira la oferta ganadora"
+				}
+			},
+			"kind": "user",
+			"methods": {
+				"auctionEndTime()": {
+					"notice": "Hora de finalización de la subasta"
+				},
+				"auctionState()": {
+					"notice": "Estado actual de la subasta"
+				},
+				"commissionFunds()": {
+					"notice": "Fondo acumulado por comisiones de la subasta"
+				},
+				"constructor": {
+					"notice": "Constructor de la subasta, establece el tiempo de duración"
+				},
+				"endAuction()": {
+					"notice": "Finaliza la subasta, indicando el ganador y el monto ganador"
+				},
+				"highestBid()": {
+					"notice": "Oferta más alta actual"
+				},
+				"highestBidder()": {
+					"notice": "Dirección del postor con la oferta más alta"
+				},
+				"owner()": {
+					"notice": "Dirección del propietario de la subasta"
+				},
+				"partialRefund()": {
+					"notice": "Permite a los postores solicitar un reembolso parcial de sus ofertas anteriores"
+				},
+				"placeBid()": {
+					"notice": "Permite a un postor realizar una oferta en la subasta"
+				},
+				"viewDeposits()": {
+					"notice": "Permite ver los depósitos actuales de todos los postores"
+				},
+				"viewOffers()": {
+					"notice": "Permite a cualquier usuario ver el historial completo de ofertas"
+				},
+				"withdrawCommissions()": {
+					"notice": "Permite al propietario retirar las comisiones acumuladas"
+				},
+				"withdrawDeposits()": {
+					"notice": "Permite al propietario reembolsar los depósitos de los postores menos la oferta ganadora          despues de marcar la subasta como finalizada   "
+				},
+				"withdrawWinningBid()": {
+					"notice": "Permite al propietario retirar la oferta ganadora"
+				}
+			},
+			"notice": "Este contrato solo es accesible por el propietario para ciertas funciones         ",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Subasta_Bonaduce.sol": "AuctionBsAs"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Subasta_Bonaduce.sol": {
+			"keccak256": "0x235f6eba99012f219d15611a162ca8831f3c864338b7b71a3dad845f959370ff",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8589cafafd3d900ea0a8231d33843297eaa21d2249bd7a0e5b65f1e7bafcf8ca",
+				"dweb:/ipfs/QmTZz4NhD1hFYwsk5KdwiAL5fKrxrNrAFsPmSzSihSq8Yj"
+			]
+		}
+	},
+	"version": 1
+}
